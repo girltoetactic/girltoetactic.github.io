@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tic Tac Toe</title>
+		<link rel="stylesheet" href="css/game.css">
+		<link rel="stylesheet" href="css/frontend.css">
+    <link rel="shortcut icon" type="image/png" href="images/ttt.PNG"/>  
+	</head>
+
+	<body>
+    <canvas id="canvas"></canvas>
+		<header>
+			<img src="images/ttt.PNG" alt="LOGO" height="50" width="50" style="text-align: left"><img src="images/logo.png" alt="LOGO" height="50" width="300" style="text-align: left">
+			<a id="game" href="game.html">Game</a>
+      <a id="home" href="home.html">Home</a>
+		</header>
+
+		<div class="container" id="container">
+
+			<div id= "center">
+				<div class="menu" >
+					<h1 style="text-align:center">Tic - Tac - Toe</h1>
+					<h3>How To Play</h3>
+					<ol>
+						<li>Player 1 Create a new game by entering the username</li>
+						<li>Player 2 Enter another username and the room id that is displayed on first window.</li>
+						<li>Click on join game. </li>
+					</ol>
+					<h4>Create a new Game</h4>
+					<input type="text" name="name" id="nameNew" placeholder=" Enter your name" class="input" required>
+					<button id="new" class="button btn">New Game</button>
+					<br><br>
+					<h4>Join an existing game</h4>
+					<input type="text" name="name" id="nameJoin" placeholder=" Enter your name" class="input" required>
+					<input type="text" name="room" id="room" placeholder=" Enter Game ID" class="input" required>
+					<button id="join" class="button btn">Join Game</button>
+				</div>
+
+				<center>
+					<div class="gameBoard">
+						<h2 id="userHello"></h2>
+						<h3 id="turn"></h3>
+						<table class="center">
+							<tr>
+								<td><button class="tile" id="button_00"></button></td>
+								<td><button class="tile" id="button_01"></button></td>
+								<td><button class="tile" id="button_02"></button></td>
+							</tr>
+							<tr>
+								<td><button class="tile" id="button_10"></button></td>
+								<td><button class="tile" id="button_11"></button></td>
+								<td><button class="tile" id="button_12"></button></td>
+							</tr>
+							<tr>
+								<td><button class="tile" id="button_20"></button></td>
+								<td><button class="tile" id="button_21"></button></td>
+								<td><button class="tile" id="button_22"></button></td>
+							</tr>
+						</table>
+					</div>
+				</center>
+
+			</div>
+		</div>
+		<script src="node_modules/jquery/dist/jquery.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="js/game.js"></script>
+    <script src="js/frontend.js"></script>
+
+		<footer>Copyright &copy; TIC TAC TOE</footer>
+
+	</body>
+</html>
